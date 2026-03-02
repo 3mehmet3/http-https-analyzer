@@ -1,20 +1,21 @@
-# 🌐 HTTP & HTTPS Request Analyzer (C++)
+# 🌐 HTTP & HTTPS Analyzer (C++)
 
-A low-level HTTP and HTTPS analyzer built using C++ socket programming.
+A low-level HTTP and HTTPS request analyzer built using C++ socket programming and OpenSSL.
 
-This project demonstrates raw TCP connections, DNS resolution, HTTP protocol handling, and secure HTTPS communication.
+This project establishes raw TCP connections, performs DNS resolution, executes TLS handshakes, and manually sends HTTP requests over both HTTP (port 80) and HTTPS (port 443).
 
 ---
 
 ## 🚀 Features
 
 - URL parsing
-- DNS resolution
+- DNS resolution using getaddrinfo
 - TCP socket connection
-- HTTP GET request handling
-- Response header parsing
-- HTTPS support (TLS/SSL)
-- Raw protocol-level inspection
+- Manual HTTP GET request creation
+- HTTP response parsing
+- HTTPS support using OpenSSL
+- TLS handshake implementation
+- Encrypted communication via SSL_read / SSL_write
 
 ---
 
@@ -22,24 +23,41 @@ This project demonstrates raw TCP connections, DNS resolution, HTTP protocol han
 
 - C++
 - POSIX Sockets
-- OpenSSL (for HTTPS)
+- OpenSSL
 - TCP/IP Networking
 - HTTP Protocol
+- TLS/SSL
 
 ---
 
-## 🔍 What This Project Demonstrates
+## 🔍 Technical Highlights
 
-- Understanding of network layers
-- TCP handshake implementation
-- Client-server communication
-- Secure connection establishment (TLS)
-- Low-level protocol analysis
+- Client-side TCP connection establishment
+- SSL context initialization and management
+- TLS handshake using OpenSSL
+- Secure data transmission over port 443
+- Support for both HTTP and HTTPS protocols
+- Manual header parsing and response handling
 
 ---
 
-## 📌 Example Usage
-./analyzer https://example.com
+## 📦 Build & Run
+
+### Compile
+make
+### Run
+./http_analyzer https://example.com
+./http_analyzer http://example.com
+
+---
+
+## 🧠 What This Project Demonstrates
+
+- Strong understanding of networking fundamentals
+- Knowledge of TCP/IP stack
+- Secure communication handling
+- System-level programming skills
+- Backend and systems development readiness
 
 ---
 
@@ -50,4 +68,4 @@ Computer Engineering Student
 
 ---
 
-This project was developed as part of systems and networking practice.
+Networking & Systems Programming Practice Project
